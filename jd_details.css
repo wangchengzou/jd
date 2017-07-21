@@ -1,0 +1,400 @@
+#main{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;/*允许项目换行*/
+}
+#bread-crumb{
+	width:1211px;
+}
+#product-intro{
+	width:1211px;
+}
+#lf-product{
+	width:211px;
+}
+#rt-product{
+	width:990px;
+	margin-left:10px;
+}
+/******1、面包屑导航******/
+#bread-crumb b{
+	font-size:18px;
+}
+/******2、产品简介************/
+#product-intro{
+	/*弹性布局,两端对齐*/
+	display:flex;
+	justify-content:space-between;
+	margin:10px 0;
+}
+/*图像预览*/
+#preview>p{
+	border:1px solid #ddd;
+}
+#preview>div{
+	display:flex;
+	justify-content:space-between;
+	margin-top:10px;
+}
+/*左右方向的a*/
+#preview>div>a{
+	width:17px;
+	height:54px;
+	background:url(my/images/background_list.png) no-repeat 0 -60px;
+}
+#preview>div>a.next{
+	background-position:-20px -60px;
+}
+#preview>div ul{
+	/*弹性布局，宽度，项目的对齐方式*/
+	display:flex;
+	width:302px;
+	justify-content:space-between;
+}
+#preview>div li{
+	width:54px;
+	height:54px;
+	border:1px solid #ddd;
+	padding:1px;
+}
+#preview>div li:hover{
+	border:2px solid #e4393c;
+	padding:0;
+}
+/*右：文字信息*/
+#detail{
+	width:849px;
+	height:352px;
+}
+#detail h1 p{
+	color:#e4393c;
+}
+#summary{
+	/*上边框，上外边距，上内边距*/
+	border-top:1px dotted #ddd;
+	margin-top:10px;
+	padding-top:10px;
+	height:294px;
+	/*弹性布局*/
+	display:flex;
+	flex-direction:column;/*主轴为交叉轴*/
+	justify-content:space-between;
+}
+#summary li.line{
+	width:600px;
+	border-top:1px dotted #ddd;
+}
+#summary li{
+	display:flex;
+	align-items:center;
+}
+#summary li>p{
+	font-family:simsun;
+	width:72px;
+	text-align:right;
+}
+/*京东价*/
+#summary-price b{
+	color:#e4393c;
+	font-size:18px;
+}
+/*配送至*/
+#summary-store>div{
+	display:flex;
+	align-items:center;
+}
+#summary-store h3{
+	font-weight:normal;
+	border:1px solid #ddd;
+	padding:3px;
+}
+
+#store-select{
+	position:relative;
+}
+#address{
+	border:1px solid #ddd;
+	background-color:#fff;
+	padding:5px;
+	width:412px;
+	min-height:200px;
+	position:absolute;
+	left:-30px;
+	top:26px;
+	z-index:10;
+	display:none;
+}
+#store-select:hover #address{
+	display:block;
+}
+#store-select:hover h3{
+	border-bottom-color:#fff;
+	position:relative;
+	z-index:30;
+}
+#address ul.tab{
+	height:30px;
+	line-height:30px;
+	border-bottom:2px solid #edd28b;
+	display:flex;
+}
+#address ul.tab li{
+	padding:0 15px;
+	border:1px solid #ddd;
+	border-bottom:none;
+	margin-right:5px;
+}
+#address ul.tab li.current{
+	border:2px solid #edd28b;
+	border-bottom:none;
+	background:#fff;
+	height:30px;
+}
+/*******左侧浮动栏#lf-product******/
+/*1、相关分类*/
+#related-sorts p{
+	border:1px solid #ddd;
+	background-color:#f7f7f7;
+	height:32px;
+	line-height:30px;
+	padding-left:10px;
+}
+#related-sorts ul{
+	border:1px solid #ddd;
+	border-top:none;
+	padding:5px;
+	display:flex;
+	flex-wrap:wrap;
+}
+#related-sorts li{
+	width:50%;
+	line-height:20px;
+}
+/*右侧内容*/
+/*优惠套装*/
+#fav-suit{
+	
+}
+
+#fav-suit div.master,#fav-suit ul.suit li{
+	width:165px;
+	padding-left:25px;
+	padding-bottom:20px;
+}
+#fav-suit span.add{
+	/*右浮动，宽度，高度，背景，上外边距*/
+	float:right;
+	width:23px;
+	height:23px;
+	background:url(my/images/background_list.png) no-repeat -120px -10px;
+	margin-top:38px;
+}
+#fav-suit div.master>p{
+	width:100px;
+}
+#fav-suit ul.suit{
+	display:flex;
+	width:660px;
+}
+
+/*所有mt的通用样式*/
+.mt{
+	/*边框，高度，背景，行高，左内边距*/
+	border:1px solid #ddd;
+	border-top:2px solid #aaa;
+	background:#f7f7f7;
+	height:33px;
+	line-height:30px;
+	padding-left:10px;
+}
+ul.mt{
+	display:flex;
+	padding-left:0;
+}
+ul.mt li{
+	padding:0 15px;
+	margin-left:-1px;
+}
+ul.mt li.current{
+	/*边框，背景颜色，上外边距，高度，行高*/
+	border:1px solid #ddd;
+	border-top:2px solid #e4393c;
+	border-bottom:none;
+	background-color:#fff;
+	margin-top:-6px;
+	height:37px;
+	line-height:35px;
+}
+
+.m-content{
+	border:1px solid #ddd;
+	border-top:none;
+	padding-top:20px;
+	display:flex;
+}
+
+/*商品介绍，规格参数模块*/
+#product-details{
+	margin:10px 0;
+}
+#product-info>ul{
+	border:1px solid #ddd;
+	border-top:none;
+	padding:10px;
+	display:flex;
+	flex-wrap:wrap;
+}
+#product-info>ul li{
+	width:33.33%;
+	line-height:1.5;
+}
+#product-info div.detail_list{
+	width:750px;
+	margin:10px auto;
+}
+#product-info div.detail_list p{
+	/*下内边距，下边框*/
+	padding-bottom:10px;
+	border-bottom:1px dashed #ddd;
+}
+#product-info div.detail_list div{
+	margin:10px 0; 
+}
+#product-info div.detail_list div span{
+	font-size:18px;
+	color:#e4393c;
+}
+/*商品评价*/
+/*好评度*/
+#comment div.rate{
+	width:200px;
+	text-align:center;
+	padding-bottom:20px;
+}
+#comment div.rate b{
+	font-size:46px;
+	color:#e4393c;
+}
+#comment div.rate span{
+	font-size:24px;
+	color:#e4393c;
+}
+/*显示比例*/
+div.percent dd{
+	/*宽度，高度，背景*/
+	width:100px;
+	height:10px;
+	background:#EFEFEF;
+}
+div.percent dd p{
+	/*高度，背景*/
+	height:10px;
+	background:linear-gradient(to top,#A90000,#E90000);
+}
+div.percent dl{
+	display:flex;
+	align-items:center;
+	padding:3px 0;
+}
+div.percent dt{
+	width:70px;
+}
+div.percent{
+	margin-top:10px;
+	width:200px;
+}
+/*买家印象*/
+div.buyers{
+	padding:0px 10px;
+	border:1px solid #ddd;
+	border-top:none;
+	border-bottom:none;
+	width:400px;
+}
+/*全部评价*/
+#comment-list{
+	margin:10px 0;
+}
+#comment-content{
+	margin-top:10px;
+}
+/*具体评论内容*/
+div.comment-item{
+	margin-bottom:10px;
+	display:flex;
+	justify-content:space-between;
+}
+div.comment-item ul.users{
+	width:120px;
+	text-align:center;
+	line-height:24px;
+}
+div.comment-item ul.users img{
+	padding:6px;
+	background:url(my/images/background_list.png) no-repeat -270px -10px;
+}
+div.comment-item ul.users b{
+	color:#088000;
+}
+/*评论内容*/
+div.comment-detail{
+	/*宽度，min-height,边框，背景，padding*/
+	width:870px;
+	border:1px solid #d0e4c2;
+	background:#FCFFFA;
+	min-height:100px;
+	padding:10px;
+	position:relative;
+}
+div.corner{
+	/*尺寸，背景，定位*/
+	width:13px;
+	height:24px;
+	background:url(my/images/corner.jpg) no-repeat;
+	position:absolute;
+	top:15px;
+	left:-13px;
+}
+div.comment-detail div.topic{
+	border-bottom:1px solid #d0e4c2;
+	display:flex;
+	justify-content:space-between;
+}
+.star{
+	display:inline-block;
+	width:76px;
+	height:15px;
+	background:url(my/images/background_list.png) no-repeat;
+}
+.star5{
+	background-position:-50px -95px;
+}
+.star4{
+	background-position:-65px -95px;
+}
+.star3{
+	background-position:-80px -95px;
+}
+div.comment-detail ul{
+	padding-top:5px;
+}
+div.comment-detail li{
+	display:flex;
+	padding:5px 0;
+}
+div.comment-detail li p{
+	width:60px;
+	text-align:right;
+}
+div.comment-detail li span{
+	padding:3px 5px;
+	background-color:#edd28b;
+	color:#333;
+}
+div.comment-detail img{
+	vertical-align:bottom;
+}
+
+
+
+
